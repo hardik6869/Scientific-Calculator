@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -16,161 +18,219 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="scientific_calculator.js" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main_box">
-        <div class="">
-            <div class="mt-2">
-                <div>
-                    <input type="text" id="input_field" class="input_div pr-3 text-right" placeholder="0" />
-                    <p class="pr-3 text-right h4 text-muted" id="perform_task"></p>
-                </div>
-            </div>
-
-            <div>
-                <button class="btn font-weight-bold">Deg</button>
-                <button class="btn font-weight-bold">F-E</button>
-            </div>
-            <div>
-                <button class="btn text-muted">MC</button>
-                <button class="btn text-muted">Mr</button>
-                <button class="btn font-weight-bold">M+</button>
-                <button class="btn font-weight-bold">M−</button>
-                <button class="btn font-weight-bold">MS</button>
-            </div>
-            <div>
-                <div class="dropdown">
-                    <button style="border: none; outline: none">
-                        Δ Trigonometry <i class="fal fa-angle-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#"> </a>
-                        <a href="#"> </a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button style="border: none; outline: none">
-                        Fuction <i class="fal fa-angle-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#"> </a>
-                        <a href="#"> </a>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <button class="btn btn_clr">2<sup>nd</sup></button>
-                <button class="btn btn_clr" onclick="fun_calculator(3.14)">π</button>
-                <button class="btn btn_clr">e</button>
-                <button class="btn btn_clr">C</button>
-                <button class="btn btn_clr" onclick="fun_calculator('del')">
-                    <i class="far fa-backspace"></i>
-                </button>
-            </div>
-            <div class="display-flex">
-                <button class="btn btn_clr" onclick="fun_calculator('sqare')">
-                    x<sup>2</sup>
-                </button>
-                <button class="btn btn_clr"><sup>1</sup>/x</button>
-                <button class="btn btn_clr" onclick="fun_calculator('||')">|x|</button>
-                <button class="btn btn_clr">exp</button>
-                <button class="btn btn_clr">mod</button>
-            </div>
-            <div>
-                <button class="btn btn_clr" onclick="('sq_root')"> √ </button>
-                <button class="btn btn_clr">(</button>
-                <button class="btn btn_clr">}</button>
-                <button class="btn btn_clr" onclick="fun_calculator('facto')">n!</button>
-                <button class="btn btn_clr" onclick="fun_calculator('/')">÷</button>
-            </div>
-            <div>
-                <button class="btn btn_clr">x<sup>y</sup></button>
-                <button class="btn btn-light digits_btn" onclick="fun_calculator(7)">
-                    7
-                </button>
-                <button class="btn btn-light digits_btn" onclick="fun_calculator(8)">
-                    8
-                </button>
-                <button class="btn btn-light digits_btn" onclick="fun_calculator(9)">
-                    9
-                </button>
-                <button class="btn btn_clr" onclick="fun_calculator('*')">×</button>
-            </div>
-            <div>
-                <button class="btn btn_clr" onclick="fun_calculator('ten_x')">10<sup>x</sup></button>
-                <button class="btn btn-light digits_btn" onclick="fun_calculator(4)">
-                    4
-                </button>
-                <button class="btn btn-light digits_btn" onclick="fun_calculator(5)">
-                    5
-                </button>
-                <button class="btn btn-light digits_btn" onclick="fun_calculator(6)">
-                    6
-                </button>
-                <button class="btn btn_clr" onclick="fun_calculator('-')">-</button>
-            </div>
-            <div>
-                <button class="btn btn_clr">log</button>
-                <button class="btn btn-light digits_btn" onclick="fun_calculator(1)">
-                    1
-                </button>
-                <button class="btn btn-light digits_btn" onclick="fun_calculator(2)">
-                    2
-                </button>
-                <button class="btn btn-light digits_btn" onclick="fun_calculator(3)">
-                    3
-                </button>
-                <button class="btn btn_clr" onclick="fun_calculator('+')">+</button>
-            </div>
-            <div>
-                <button class="btn btn_clr">In</button>
-                <button class="btn btn-light"><sup>+</sup>/-</button>
-                <button class="btn btn-light digits_btn" onclick="fun_calculator(0)">
-                    0
-                </button>
-                <button class="btn btn-light" onclick="fun_calculator('.')">.</button>
-                <button class="btn btn_clr" onclick="fun_calculator('=')">=</button>
-            </div>
+      <div class="">
+        <div class="mt-2">
+          <div>
+            <!-- <input
+              type="text"
+              id="display"
+              name="display"
+              class="input_div pr-3 text-right"
+              placeholder="0"
+            /> -->
+            <div class="input_div pr-3 text-right" id="display"></div>
+            <p class="pr-3 text-right h4 text-muted" id="perform_task"></p>
+          </div>
         </div>
+
+        <div>
+          <button class="btn font-weight-bold">Deg</button>
+          <button class="btn font-weight-bold">F-E</button>
+        </div>
+        <div>
+          <button class="btn text-muted">MC</button>
+          <button class="btn text-muted">Mr</button>
+          <button class="btn font-weight-bold">M+</button>
+          <button class="btn font-weight-bold">M−</button>
+          <button class="btn font-weight-bold">MS</button>
+        </div>
+
+        <div>
+          <div class="dropdown">
+            <button style="border: none; outline: none">
+              Δ Trigonometry <i class="fal fa-angle-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a class="trigino_&_Fun"> sin </a>
+              <a class="trigino_&_Fun"> cos </a>
+              <a class="trigino_&_Fun"> tan </a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button style="border: none; outline: none">
+              Fuction <i class="fal fa-angle-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a class="trigino_&_Fun"> </a>
+              <a class="trigino_&_Fun"> </a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn btn_clr">2<sup>nd</sup></button>
+          <button class="btn btn_clr">π</button>
+          <button class="btn btn_clr">e</button>
+          <button class="btn btn_clr" onclick="clear()">C</button>
+          <button class="btn btn_clr" onclick="del()">
+            <i class="far fa-backspace"></i>
+          </button>
+        </div>
+        <div class="display-flex">
+          <button class="btn btn_clr">x<sup>2</sup></button>
+          <button class="btn btn_clr"><sup>1</sup>/x</button>
+          <button class="btn btn_clr">|x|</button>
+          <button class="btn btn_clr">exp</button>
+          <button class="btn btn_clr">mod</button>
+        </div>
+        <div>
+          <button class="btn btn_clr">√</button>
+          <button class="btn btn_clr">(</button>
+          <button class="btn btn_clr">)</button>
+          <button class="btn btn_clr">n!</button>
+          <button class="btn btn_clr">÷</button>
+        </div>
+        <div>
+          <button class="btn btn_clr">x<sup>y</sup></button>
+          <button class="btn btn-light digits_btn">7</button>
+          <button class="btn btn-light digits_btn">8</button>
+          <button class="btn btn-light digits_btn">9</button>
+          <button class="btn btn_clr">×</button>
+        </div>
+        <div>
+          <button class="btn btn_clr">10<sup>x</sup></button>
+          <button class="btn btn-light digits_btn">4</button>
+          <button class="btn btn-light digits_btn">5</button>
+          <button class="btn btn-light digits_btn">6</button>
+          <button class="btn btn_clr">-</button>
+        </div>
+        <div>
+          <button class="btn btn_clr">log</button>
+          <button class="btn btn-light digits_btn" onclick="myfun()">1</button>
+          <button class="btn btn-light digits_btn">2</button>
+          <button class="btn btn-light digits_btn">3</button>
+          <button class="btn btn_clr">+</button>
+        </div>
+        <div>
+          <button class="btn btn_clr">ln</button>
+          <button class="btn btn-light"><sup>+</sup>/-</button>
+          <button class="btn btn-light digits_btn">0</button>
+          <button class="btn btn-light">.</button>
+          <button class="btn btn_clr">=</button>
+        </div>
+      </div>
     </div>
 
-    <script>
-        const fun_calculator = (digits) => {
-            
-            item = document.getElementById("input_field");
-            if (digits == "=") {
-                item.value = eval(item.value);
-            } 
-            else if (digits == "sqare") {
-                item.value = item.value ** 2;
-            } 
-            else if (digits == "facto") {
-                fact = 1;
-                for (let i = item.value; i > 0; i--) {
-                    fact *= i;
-                }
-                item.value = fact;
-            }
-            else if(digits == "ten_x"){
-                item.value = 10 ** item.value; 
-            } 
-            else if(digits == 'sq_root'){
-                ans = Math.sqrt(item.value);
-            }
-            else {
-                item.value += digits;
-            }
-        };
-    </script>
-</body>
+    <script src="./scientific_calculator.js"></script>
 
+    <!-- <script src="scientific_calculator.js"></script>
+     <script>
+      item = document.getElementById("display");
+      place_data = document.getElementById("perform_task");
+
+      arr = [];
+      const fun_calculate = (digits) => {
+        item.value += digits;
+        arr.push(item.value);
+      };
+      const sqare = () => {
+        item.value = item.value ** 2;
+      };
+      const facto = () => {
+        fact = 1;
+        for (let i = item.value; i > 0; i--) {
+          fact *= i;
+        }
+        item.value = fact;
+      };
+      const fun_lan = () => {
+        item.value = Math.log(item.value);
+      };
+      const ten_x = () => {
+        item.value = 10 ** item.value;
+      };
+      const equal = () => {
+        tmp = item.value;
+        item.value = eval(item.value);
+        place_data.innerHTML = `${tmp} = ${item.value}`;
+        arr.push(place_data);
+      };
+      const sqrt = () => {
+        tmp = item.value;
+        item.value = Math.sqrt(item.value);
+        place_data.innerHTML = `√${tmp} = ${item.value}`;
+      };
+      const del = () => {
+        let dele = item.value;
+        item.value = dele.substring(0, dele.length - 1);
+      };
+      const a_clear = () => {
+        item.value = "";
+      };
+      const logarithm = () => {
+        item.value = Math.log10(item.value);
+      };
+      const one_x = () => {
+        item.value = 1 / item.value;
+      };
+      const expo = () => {
+        item.value = Math.exp(item.value);
+      };
+      const absolute = () => {
+        item.value = Math.abs(item.value);
+      };
+      const Eulers_no = () => {
+        item.value = 2.718281828459045;
+      };
+      const power = () => {
+        item.value = Math.pow(item.value);
+      };
+      const sin = () => {
+          item.value = Math.sin(item.value);
+      }
+      const cos = () => {
+          item.value = Math.cos(item.value);
+      }
+      const tan = () => {
+          item.value = Math.tan(item.value);
+      }
+      const rev_no = () => {
+          if(item.value > 0){
+              item.value = `-${item.value}`;
+          }else{
+              item.value = Math.abs(item.value);
+          }
+      }
+    //   const rad_to_deg = () => {
+    //     var pi = Math.PI;
+    //  item.value*= (180/pi);
+    //   }
+      document.getElementById("perform_task").innerHTML = item.value;
+      console.log();
+    </script> -->
+  </body>
 </html>
