@@ -4,6 +4,7 @@ let buttons = Array.from(document.getElementsByClassName("btn"));
 let btn_sci = Array.from(document.getElementsByClassName("trigino_&_Fun"));
 let memory_btn = Array.from(document.getElementsByClassName("memory"));
 
+    // Functions 
 
 var arr_list = []
 function memory(m_fun, data) {
@@ -83,6 +84,9 @@ const check = (val) => {
 
 
 
+  // Mapping a buttons and perform particuler button task
+      
+
 memory_btn.map((value) => {
   value.addEventListener("click", (e) => {
     switch (e.target.innerText) {
@@ -107,9 +111,9 @@ memory_btn.map((value) => {
 
 
 btn_sci.map((value) => {
-  value.addEventListener("click", (a) => {
+  value.addEventListener("click", (e) => {
     if (display.value !== "0" && display.value !== "") {
-      switch (a.target.innerText) {
+      switch (e.target.innerText) {
         case "sin":
           s_display.value = `sin(${display.value})`;
           display.value = Math.sin(display.value);
@@ -157,7 +161,7 @@ buttons.map((value) => {
   value.addEventListener("click", (e) => {
     switch (e.target.innerText) {
       case "=":
-        s_display.value = `${display.value}=`;
+        s_display.value = `${display.value}`;
         if (display.value.charAt(display.value.length - 1) == "!") {
           display.value = display.value.substring(
             0,
@@ -335,6 +339,5 @@ buttons.map((value) => {
       default:
         display.value += e.target.innerText;
     }
-
   });
 });
